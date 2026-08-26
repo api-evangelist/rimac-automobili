@@ -1,0 +1,92 @@
+generated: '2026-08-26'
+method: searched
+source: >-
+  npm registry search API (registry.npmjs.org/-/v1/search) plus the GitHub organisation
+  search API, queried 2026-08-26 for "rimac", "rimac-technology" and "@rimac-technology".
+package_count: 0
+packages: []
+note: >-
+  Rimac Automobili publishes no API client library in any public package registry,
+  because it publishes no public API for one to wrap. No SDKs pointer is emitted in
+  apis.yml.
+search_log:
+- registry: npm
+  query: rimac / rimac-technology / "@rimac-technology"
+  first_party_api_sdks: 0
+  result: >-
+    The only Rimac-branded packages on npm sit under the @rimac-technology scope and are
+    internal engineering tooling published by the SIBLING company Rimac Technology d.o.o.,
+    not by Rimac Automobili — semantic-release plugins, an ESLint config, an ESLint plugin
+    and a style guide. None of them is a client library for any API. They are recorded
+    here for provenance only and are deliberately NOT attributed to this provider.
+- registry: pypi
+  query: rimac
+  first_party_api_sdks: 0
+  result: No first-party Rimac package.
+- registry: github
+  query: 'org search: rimac'
+  first_party_api_sdks: 0
+  result: >-
+    github.com/rimac-automobili (created 2018-02-15) and github.com/RimacAutomobili
+    (created 2021-07-28) both exist and both hold ZERO public repositories.
+    github.com/RimacTechnology holds 8 public repositories, all developer tooling
+    (semantic-release plugins, ESLint config/plugin, a style guide, a Mapbox GL Flutter
+    fork) — none is an API contract or an API client. github.com/rimac-energy holds one
+    public repository, a React Native calendar component fork.
+    github.com/Rimac-Seguros-bkp is the Peruvian insurer RIMAC Seguros — a DIFFERENT
+    company entirely, excluded.
+not_first_party_related:
+- language: javascript
+  registry: npm
+  name: "@rimac-technology/semantic-release-ecr"
+  url: https://www.npmjs.com/package/@rimac-technology/semantic-release-ecr
+  version: 2.1.5
+  published: '2025-02-24'
+  official: false
+  owner: Rimac Technology d.o.o. (sibling company, not Rimac Automobili)
+  kind: build tooling — not an API client
+- language: javascript
+  registry: npm
+  name: "@rimac-technology/semantic-release-monorepo"
+  url: https://www.npmjs.com/package/@rimac-technology/semantic-release-monorepo
+  version: 1.2.10
+  published: '2025-02-24'
+  official: false
+  owner: Rimac Technology d.o.o. (sibling company, not Rimac Automobili)
+  kind: build tooling — not an API client
+- language: javascript
+  registry: npm
+  name: "@rimac-technology/style-guide"
+  url: https://www.npmjs.com/package/@rimac-technology/style-guide
+  version: 10.0.0
+  published: '2024-03-06'
+  official: false
+  owner: Rimac Technology d.o.o. (sibling company, not Rimac Automobili)
+  kind: lint/style config — not an API client
+- language: javascript
+  registry: npm
+  name: "@rimac-technology/eslint-plugin"
+  url: https://www.npmjs.com/package/@rimac-technology/eslint-plugin
+  version: 1.5.0
+  published: '2023-08-03'
+  official: false
+  owner: Rimac Technology d.o.o. (sibling company, not Rimac Automobili)
+  kind: lint plugin — not an API client
+- language: javascript
+  registry: npm
+  name: "@rimac-technology/semantic-release-s3"
+  url: https://www.npmjs.com/package/@rimac-technology/semantic-release-s3
+  version: 2.4.0
+  published: '2023-03-20'
+  official: false
+  owner: Rimac Technology d.o.o. (sibling company, not Rimac Automobili)
+  kind: build tooling — not an API client
+- language: javascript
+  registry: npm
+  name: "@rimac-technology/eslint-config"
+  url: https://www.npmjs.com/package/@rimac-technology/eslint-config
+  version: 31.2.0
+  published: '2022-11-21'
+  official: false
+  owner: Rimac Technology d.o.o. (sibling company, not Rimac Automobili)
+  kind: lint config — not an API client

@@ -1,0 +1,98 @@
+generated: '2026-08-26'
+method: searched
+source: >-
+  https://www.rimac-automobili.com/legal-and-compliance-documents/ (HTTP 200) plus the
+  full /.well-known/ probe recorded in well-known/rimac-automobili-well-known.yml.
+summary: >-
+  Rimac Automobili publishes a corporate compliance and governance document set, but no
+  API-facing standard, protocol or certification of any kind. There is no API contract to
+  assert conformance against, so every technical entry below is honestly false rather than
+  unknown.
+standards:
+- id: openapi
+  conforms: false
+  evidence: >-
+    No OpenAPI or Swagger document was found on any Rimac host. /openapi.json,
+    /swagger.json and /llms.txt all returned 404 on www.rimac-automobili.com,
+    www.rimac-technology.com and estore.rimac-automobili.com.
+- id: asyncapi
+  conforms: false
+  evidence: >-
+    Rimac's own engineering write-ups and its HiveMQ case study describe an MQTT-based
+    connected-vehicle telemetry backend, but no AsyncAPI document, channel catalogue or
+    broker endpoint is published. The event surface is private to Rimac's own vehicles
+    and owner apps.
+- id: oauth2
+  conforms: false
+  evidence: /.well-known/oauth-authorization-server returned 404 on every probed host.
+- id: oidc
+  conforms: false
+  evidence: /.well-known/openid-configuration returned 404 on every probed host.
+- id: rfc9457
+  conforms: false
+  evidence: No API, therefore no error envelope to evaluate.
+- id: rfc9116
+  conforms: false
+  evidence: >-
+    /.well-known/security.txt returned 404 on all seven probed hosts. No vulnerability
+    disclosure policy or security contact is published in machine-readable form.
+- id: rfc8615
+  conforms: false
+  evidence: >-
+    No document is served from any /.well-known/ path on any Rimac host — see
+    well-known/rimac-automobili-well-known.yml, hit_count 0.
+- id: a2a
+  conforms: false
+  evidence: >-
+    /.well-known/agent-card.json and the legacy /.well-known/agent.json both returned 404
+    on all seven probed hosts. No agent card exists; per the pipeline contract none was
+    authored.
+- id: mcp
+  conforms: false
+  evidence: No hosted or local MCP server is published or referenced anywhere on Rimac's surface.
+domain_standards:
+- id: automotive-rmi
+  name: EU Repair and Maintenance Information (Reg. (EU) 2018/858 Art. 61-66) standardised RMI portal
+  conforms: false
+  evidence: >-
+    https://www.rimac-automobili.com/technical-service-documentation/ (HTTP 200) is the
+    page where an OEM of this size would normally expose a standardised RMI portal for
+    independent repairers. Rimac serves only a free-text contact form there — no portal,
+    no login, no subscription tier, no machine-readable catalogue. This is a candidate
+    gap, not a scored penalty.
+- id: automotive-extended-vehicle
+  name: ISO 20077/20078 Extended Vehicle (ExVe) web-service interface
+  conforms: false
+  evidence: >-
+    Rimac operates a first-party MQTT telemetry backend and first-party iOS/Android owner
+    apps, but exposes no ISO 20078-style ExVe resource interface, no neutral-server
+    arrangement, and no third-party vehicle-data access programme.
+- id: automotive-odx-asam
+  name: ASAM ODX / MCD diagnostic data exchange
+  conforms: false
+  evidence: >-
+    https://www.rimac-automobili.com/edr-tool/ (HTTP 200) advertises an Event Data
+    Recorder tool as required by EU/UNECE regulation, but publishes no ODX, MDX or other
+    machine-readable diagnostic data package.
+compliance_program:
+  published: true
+  url: https://www.rimac-automobili.com/legal-and-compliance-documents/
+  http_status: 200
+  kind: corporate-governance
+  note: >-
+    IMPORTANT — read this before treating the Compliance pointer as a security signal.
+    What Rimac publishes here is a corporate governance and ESG document set, NOT an
+    information-security certification programme. No SOC 2, ISO 27001, ISO 9001, IATF
+    16949, PCI DSS, HIPAA or FedRAMP attestation is named anywhere on the page or on any
+    other public Rimac surface, and no trust centre exists.
+  documents:
+  - Code of Conduct
+  - Supplier Code of Conduct
+  - Responsible Procurement Policy
+  - Modern Slavery Statement
+  - Non-Financial Reporting Directive statement
+  - Whistleblowing System
+  - Privacy Policy
+  - Cookie Policy
+  - Legal Notice
+certifications: []

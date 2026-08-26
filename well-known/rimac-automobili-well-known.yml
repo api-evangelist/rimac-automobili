@@ -1,0 +1,109 @@
+generated: '2026-08-26'
+method: probed
+source: >-
+  Live unauthenticated GET of the RFC 8615 /.well-known/ discovery surface on every
+  Rimac Automobili host reachable from apis.yml and the company's own site navigation.
+note: >-
+  Every probed path returned an honest HTTP 404 with the host's normal WordPress /
+  Next.js 404 page — no catch-all soft-200s were observed, so the negatives below are
+  real absences rather than a masked SPA. NO WellKnown and NO SecurityTxt pointer is
+  emitted in apis.yml, because not one path returned a document. Rimac Automobili does
+  not serve a discovery surface of any kind.
+hit_count: 0
+hosts:
+- host: https://www.rimac-automobili.com
+  note: Primary corporate site (WordPress, Yoast). robots.txt allows all; sitemap_index.xml served.
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: https://www.rimac-technology.com
+  note: Sibling company (Rimac Technology d.o.o.) probed because it is linked from the Rimac Automobili primary navigation.
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: https://www.rimac-group.com
+  note: Group holding site; carries the group careers portal.
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+- host: https://bugatti-rimac.com
+  note: Bugatti Rimac joint-venture site — the legal entity named in the Rimac Automobili site footer.
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+- host: https://estore.rimac-automobili.com
+  note: First-party merchandise store (WooCommerce / WordPress).
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: https://campus.rimac-group.com
+  note: Rimac Campus visitor site.
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: https://www.rimac-newsroom.com
+  note: Group media centre / press newsroom.
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null

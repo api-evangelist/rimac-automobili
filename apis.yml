@@ -1,17 +1,40 @@
 aid: rimac-automobili
 name: Rimac Automobili
-description: 'Rimac Automobili is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Rimac Automobili d.o.o. is a Croatian electric hypercar manufacturer and automotive
+  technology company founded by Mate Rimac in 2009 and headquartered at the Rimac Campus
+  in Kerestinec, near Zagreb. It designs and builds the Nevera and Nevera R all-electric
+  hypercars, and develops the vehicle software, infotainment, connectivity and telemetry
+  stack that runs them in-house. Since the 2021 formation of the Bugatti Rimac joint
+  venture with Porsche, the group's component and OEM-supply business was carved out into
+  the sister company Rimac Technology, while Rimac Automobili remains the vehicle brand.
+  Rimac operates a private, customer-only connected-vehicle backend — an MQTT-based
+  telemetry platform feeding first-party iOS and Android owner apps with location,
+  charging, battery and driving-performance data, plus over-the-air update and remote
+  command channels — but it publishes no public developer program, developer portal,
+  API reference, or machine-readable API contract of any kind. This profile is maintained
+  in the API Evangelist network for company and portfolio tracking.
+image: https://cloudfront.rimac-automobili.com/wp-content/uploads/2023/07/18115344/7-HYPERGARAGE-2880x1920.jpg
 url: https://raw.githubusercontent.com/api-evangelist/rimac-automobili/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
 x-tier: stub
 x-tier-reason: harvest
+x-parent-company: Bugatti Rimac / Rimac Group
 specificationVersion: '0.20'
 created: '2026-08-26'
 modified: '2026-08-26'
 tags:
 - Company
+- Automotive
+- Electric Vehicles
+- Manufacturing
+- Automotive Technology
+- Hypercars
+- Connected Vehicles
+- Telematics
+- Croatia
+- Mobility
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +43,60 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
+  url: https://www.rimac-automobili.com/
+- type: About
+  url: https://www.rimac-automobili.com/about-us/
+- type: Blog
+  url: https://www.rimac-newsroom.com/
+- type: BlogRSS
+  url: https://www.rimac-automobili.com/feed/
+- type: Support
+  url: https://www.rimac-automobili.com/contact-us/
+- type: PrivacyPolicy
+  url: https://www.rimac-automobili.com/privacy-policy/
+- type: TermsOfService
+  url: https://www.rimac-automobili.com/legal-notice/
+- type: Compliance
+  url: https://www.rimac-automobili.com/legal-and-compliance-documents/
+- type: Careers
+  url: https://www.rimac-group.com/careers/
+- type: DomainSecurity
+  url: security/rimac-automobili-domain-security.yml
+- type: Conformance
+  url: conformance/rimac-automobili-conformance.yml
+- type: LLMsTxt
+  url: llms/rimac-automobili-llms.txt
+- type: SecondaryMarketListing
   url: https://forgeglobal.com/rimac-automobili_stock/
+x-enrichment:
+  date: '2026-08-26'
+  status: minimal
+  artifacts_added: 5
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Rimac Automobili builds electric hypercars and keeps its vehicle software entirely
+    in-house — its connected-car backend is a private MQTT telemetry platform serving only
+    Rimac's own owner apps, and the corporate site has no /developers or /api section at
+    all (both return HTTP 404), no /.well-known/ document on any of seven Rimac hosts, and
+    no OpenAPI at any API-host root.
+  evidence:
+  - url: https://www.rimac-automobili.com/developers
+    status: 404
+  - url: https://www.rimac-automobili.com/api
+    status: 404
+  - url: https://www.rimac-automobili.com/openapi.json
+    status: 404
+  - url: https://www.rimac-technology.com/openapi.json
+    status: 404
+  - url: https://www.rimac-automobili.com/.well-known/agent-card.json
+    status: 404
+  - url: https://www.rimac-automobili.com/.well-known/security.txt
+    status: 404
+  - url: https://www.rimac-automobili.com/llms.txt
+    status: 404
+  - url: https://www.rimac-automobili.com/
+    status: 200
+  checked: '2026-08-26'
